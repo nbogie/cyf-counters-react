@@ -1,3 +1,8 @@
+# cyf counters react
+
+A simple example of multiple counters where state is being held in the parent
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
