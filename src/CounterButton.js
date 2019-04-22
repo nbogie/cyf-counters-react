@@ -2,7 +2,7 @@ import React from "react";
 
 function CounterButton(props) {
   return (
-    <div className="counter-button col-sm row">
+    <div className="row">
       <button
         id={props.id}
         className="btn btn-primary col-6"

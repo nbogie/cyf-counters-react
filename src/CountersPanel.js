@@ -36,19 +36,21 @@ class CountersPanel extends Component {
           <h1>{this.props.title}</h1>
           <div className="container">
             {Object.values(this.state.counts).map(c => (
-              <div key={c.name} className="row">
-                <CounterButton
-                  id={c.name}
-                  text={c.name}
-                  count={c.count}
-                  handleClick={this.counterClicked}
-                />
-              </div>
+              <CounterButton
+                id={c.name}
+                key={c.name}
+                text={c.name}
+                count={c.count}
+                handleClick={this.counterClicked}
+              />
             ))}
+            <div className="row">
+              <span className="col-6">Total</span>
+              <span className="col-6 total">{this.state.total}</span>
+            </div>
             <div className="row">
               <SecondaryButton text="Reset" handleClick={this.reset} />
             </div>
-            <div className="row">Total: {this.state.total}</div>
           </div>
         </div>
       </div>
@@ -58,7 +60,7 @@ class CountersPanel extends Component {
 
 function SecondaryButton(props) {
   return (
-    <button className="btn btn-secondary" onClick={props.handleClick}>
+    <button className="btn btn-warning" onClick={props.handleClick}>
       {props.text}
     </button>
   );

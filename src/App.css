@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+.total {
+  text-decoration: underline;
+  font-weight: bold;
+}
