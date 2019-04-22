@@ -34,20 +34,22 @@ class CountersPanel extends Component {
       <div>
         <div className="jumbotron">
           <h1>{this.props.title}</h1>
-          {Object.values(this.state.counts).map(c => (
-            <div key={c.name} className="row">
-              <CounterButton
-                id={c.name}
-                text={c.name}
-                count={c.count}
-                handleClick={this.counterClicked}
-              />
+          <div className="container">
+            {Object.values(this.state.counts).map(c => (
+              <div key={c.name} className="row">
+                <CounterButton
+                  id={c.name}
+                  text={c.name}
+                  count={c.count}
+                  handleClick={this.counterClicked}
+                />
+              </div>
+            ))}
+            <div className="row">
+              <SecondaryButton text="Reset" handleClick={this.reset} />
             </div>
-          ))}
-          <div className="row">
-            <SecondaryButton text="Reset" handleClick={this.reset} />
+            <div className="row">Total: {this.state.total}</div>
           </div>
-          <div className="row">Total: {this.state.total}</div>
         </div>
       </div>
     );

@@ -5,12 +5,15 @@ function CounterButton(props) {
     <div className="counter-button col-sm row">
       <button
         id={props.id}
-        className="btn btn-primary col-sm"
+        className="btn btn-primary col-6"
         onClick={props.handleClick}
       >
         {props.text}
       </button>
-      <span className="col-sm">{props.count}</span>
+      <span className="col-6">
+        <span className="count" />
+        {props.count}
+      </span>
     </div>
   );
 }
