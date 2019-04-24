@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <CountersPanel
-          title="Meal Counts"
+          title="Meal Order: Counts"
           names={["Vegetarian", "Vegan", "Halal", "Gluten-free", "Anything!"]}
         />
       </div>
