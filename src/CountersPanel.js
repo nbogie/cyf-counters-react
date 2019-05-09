@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./App.css";
 import CounterButton from "./CounterButton";
+import "./App.css";
 
 class CountersPanel extends Component {
   remakeCounts = () => {
@@ -28,7 +28,6 @@ class CountersPanel extends Component {
   reset = () => {
     this.setState({ counts: this.remakeCounts(), total: 0 });
   };
-
   render() {
     return (
       <div>

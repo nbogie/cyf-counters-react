@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import CountersPanel from "./CountersPanel";
+import SliderToy from "./SliderToy";
 
 class App extends Component {
   render() {
@@ -10,6 +11,9 @@ class App extends Component {
           title="Meal Order: Counts"
           names={["Vegetarian", "Vegan", "Halal", "Gluten-free", "Anything!"]}
         />
+        <SliderToy />
+        <SliderToy />
+        <SliderToy />
       </div>
     );
   }
